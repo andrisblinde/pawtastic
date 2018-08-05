@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet" type="text/css">             
+    </head>
+    <body>
+        <div class="container-fluid wrapper">
+
+            <div class="row columns content">                           
+                    
+                    <div class="col-md-4 multi-step-form-progress"><br />
+
+                        <a class="logo" href="index.php"><img src="img/logo.png"></img></a>
+                        
+                        <ul id="progressbar">
+                            <li class="step active">Pet basics</li>
+                            <li class="step">Payment details</li>
+                            <li class="step">Confirm</li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-1 multi-step-form">
+                    </div>
+
+                <div class="col-md-7 multi-step-form">
+                  
+                    <form method="post" id="signup" name="signup" action="signup.php" enctype="multipart/form-data" class="regform">
+                        
+                        <fieldset id="first">
+                          <div class="row">                            
+                            <div class="form-group col-md-10">
+                            <h2 class="title">Yay, we love dogs! Give us the basics about your pup.</h2>
+                          </div>
+                          </div>
+
+                              <div class="form-row">                            
+                                <div class="form-group col-md-5">
+                                  <label for="name">Name</label>
+                                  <input type="text" class="form-control" name="name" id="name" placeholder="Pet's name">
+                                </div>
+                                <div class="form-group col-md-5">
+                                  <br />
+                                  <label for="file" class="photo"><span class="upload"><img src="img/photo.png" /></span> Upload a photo</label>
+
+                                  <input type="file" class="form-control-file inputfile" name="file" id="file" placeholder="Photo">
+                                </div>
+                              </div>
+                              <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label for="breed">Breed</label>
+                                    <input type="text" class="form-control" name="breed" id="breed" placeholder="Pet's breed">
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label for="birthday">Birthday</label>
+                                    <input type="date" class="form-control" name="birthday" id="birthday" placeholder="MM/DD/YYYY">
+                                </div>
+                              </div>
+                              <div class="form-row">
+                                <div class="form-group col-md-5">
+                                  <label for="gender" class="text-left">Gender</label>
+                                  <div class="card">
+                                    <div class="form-row align-items-center">
+                                      <div class="form-group col-md-5 text-center">
+                                                                               
+                                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                        <label class="form-check-label" for="female"> Female</label>
+                                      </div>
+                                      <div class="form-group col-md-5 text-center">       
+                                        <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+                                        <label class="form-check-label" for="male"> Male</label>
+                                      </div>
+                                    </div>
+                                  </div>                                   
+                                </div>
+                                <div class="form-group col-md-5">
+                                  <label for="gender" class="text-left">Spayed or Neutered</label>
+                                  <div class="card">
+                                    <div class="form-row">
+                                      <div class="form-group col-md-5 text-center">                                         
+                                        <input class="form-check-input" type="radio" name="spayed" id="yes" value="yes">
+                                        <label class="form-check-label" for="spayed"> Yes</label>
+                                      </div>
+                                      <div class="form-group col-md-5 text-center">   
+                                        <input class="form-check-input" type="radio" name="spayed" id="no" value="no" checked>
+                                        <label class="form-check-label" for="not"> No</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="form-row">
+                                <div class="form-group col-md-10">
+                                  <label for="weight">Weight</label>
+                                  <select id="weight" name="weight" class="form-control">
+                                    <option name="50-100" value="50-100">50-100 lbs</option>
+                                    <option name="100-150" value="100-150">100-150 lbs</option>
+                                    <option name="150-200" value="150-200">150-200 lbs</option>
+                                  </select>
+                                </div>
+                              </div>  
+                              
+                              <a href="index.php"><input class="btn btn-outline-dark exit_btn" name="exit" type="button" value="Exit"></a>
+                              <input class="btn btn-dark float-right next_btn" name="next" type="button" value="Next">
+
+
+                        </fieldset>
+
+                        <fieldset id="second">
+                            <h2 class="title">How would you like to pay for your dog walk?</h2>
+
+                              <div class="form-row">                            
+                                <div class="form-group col-md-10">
+                                  <label for="card-holder-name">Credit card holder name</label>
+                                  <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Name on credit card">
+                                </div>                                
+                              </div>
+                              <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <label for="card-number">Credit card number</label>
+                                    <input type="text" class="form-control" name="card-number" id="card-number" placeholder="0000-0000-0000-0000">
+                                </div>
+                              </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                      <label for="exp-day">Expiration date</label>
+                                      <select name="exp-day" id="exp-day" class="form-control">
+                                        <option name="01" value="01">01</option>
+                                        <option name="02" value="02">02</option>
+                                        <option name="03" value="03">03</option>
+                                        <option name="04" value="04">04</option>
+                                        <option name="05" value="05">05</option>
+                                        <option name="06" value="6">06</option>
+                                        <option name="07" value="7">07</option>
+                                        <option name="08" value="8">08</option>
+                                        <option name="09" value="9">09</option>
+                                        <option name="10" value="10">10</option>
+                                        <option name="11" value="11">11</option>
+                                        <option name="12" value="12">12</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                      <label for="exp-month">&nbsp;</label>
+                                      
+                                      <select name="exp-month" id="exp-month" class="form-control">
+                                        <option name="Jan" value="Jan">Jan</option>
+                                        <option name="Feb" value="Feb">Feb</option>
+                                        <option name="Mar" value="Mar">Mar</option>
+                                        <option name="Apr" value="Apr">April</option>
+                                        <option name="May" value="May">May</option>
+                                        <option name="Jun" value="Jun">June</option>
+                                        <option name="Jul" value="Jul">July</option>
+                                        <option name="Aug" value="Aug">August</option>
+                                        <option name="Sep" value="Sep">September</option>
+                                        <option name="Oct" value="Oct">October</option>
+                                        <option name="Nov" value="Nov">November</option>
+                                        <option name="Dec" value="Dec">December</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                      <label for="cvc">CVC</label>
+                                      <input type="number" class="form-control" name="cvc" id="cvc" placeholder="327">
+                                    </div>                                
+                                 
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" name="save-card" id="save-card">
+                                        <label class="form-check-label" for="save-card">Save this card for future use.</label>
+                                    </div>
+                                </div>                              
+
+                              <input class="btn btn-outline-dark back_btn" name="back" type="button" value="Back">
+                              <input class="btn btn-dark float-right submit_btn" name="submit" type="submit" value="Next">
+
+                        </fieldset>
+                         
+                    </form>
+
+                </div>
+            </div>
+        </div>            
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js.js"></script>
+    </body>
+</html>
